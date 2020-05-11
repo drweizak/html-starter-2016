@@ -1,0 +1,59 @@
+// Debug Mode
+// 0 - not on debug mode
+// 1 - highlights with red border
+$debugMode: 0;
+
+$grid-columns: 12 !default; //** Numero de colunas.
+$grid-gutter-width: 30px !default; //** Padding Entre Colunas. É dividido em metade para a esquerda e direita.
+
+$screen-xs:     320px;
+$screen-sm:     768px;
+$screen-md:     992px;
+$screen-lg:     1200px;
+$screen-xl:     1500px;
+$screen-xs-min: $screen-xs;
+$screen-sm-min: $screen-sm;
+$screen-md-min: $screen-md;
+$screen-lg-min: $screen-lg;
+$screen-xl-min: $screen-xl;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+$screen-lg-max: ($screen-xl-min - 1);
+
+$container-tablet: (720px + $grid-gutter-width) !default; //** For `$screen-sm-min` and up.
+$container-md: $screen-md !default; // Large screen / wide desktop
+$container-desktop: (980px + $grid-gutter-width) !default;
+$container-large-desktop: (1140px + $grid-gutter-width) !default;
+$container-xlarge-desktop: (1420px + $grid-gutter-width) !default; //** For `$screen-lg-min` and up.
+
+//* INPUTS *//
+$input-width: 20px;
+$input-height: 20px;
+$input-radius: 3px;
+
+//* COLORS *//
+$black:                  #000000 !default;
+$gray-extra-darker:      #222222 !default;
+$gray-extra-dark:        #444444 !default;
+$gray-darker:            #666666 !default;
+$gray-dark:              #999999 !default;
+$gray:                   #aaaaaa !default;
+$gray-light:             #bbbbbb !default;
+$gray-lighter:           #cccccc !default;
+$gray-extra-light:       #dddddd !default;
+$gray-extra-lighter:     #eeeeee !default;
+$white:                  #FFFFFF !default;
+
+$brand-primary:         #0298ae !default;
+$brand-success:         #65f67d !default;
+$brand-info:            #0298ae !default;
+$brand-warning:         #d7a436 !default;
+$brand-danger:          #c0392b !default;
+
+//* FONTS & ICONS *//
+$fonts-path: "../fonts/" !default;
+$font-url: "https://fonts.googleapis.com/css?family=Heebo:300";
+$font-Arial: "Arial";
+$font-icomoon: "icomoon";
+$icon-example: "\e908";

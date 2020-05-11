@@ -1,0 +1,12 @@
+@if $debugMode == 1 {
+
+	img[alt=""],
+	img:not([alt]),
+	a[title=""],
+	a:not([title]),
+	a[href=""],
+	a:not([href]) {
+		border: 2px solid red !important;
+	}
+	
+}

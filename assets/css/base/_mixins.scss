@@ -1,0 +1,63 @@
+//* MEDIA QUERIES MIXINS *//
+@mixin media-xs {
+   @media (min-width: $screen-xs-min){
+    @content;
+  }
+}
+@mixin media-sm {
+   @media (min-width: $screen-sm-min){
+    @content;
+  }
+}
+@mixin media-md {
+   @media (min-width: $screen-md-min){
+    @content;
+  }
+}
+@mixin media-lg {
+   @media (min-width: $screen-lg-min){
+    @content;
+  }
+}
+@mixin media-xl {
+   @media (min-width: $screen-xl-min){
+    @content;
+  }
+}
+//* FONT MIXINS *//
+@mixin font-face($font-path, $font-name){
+  @font-face {
+    font-family: '#{$font-name}';
+    src: url('#{$font-path}/#{$font-name}.eot');
+    src:  url('#{$font-path}/#{$font-name}.eot#iefix') format('embedded-opentype'),
+          url('#{$font-path}/#{$font-name}.ttf') format('truetype'),
+          url('#{$font-path}/#{$font-name}.woff') format('woff'),
+          url('#{$font-path}/#{$font-name}.svg##{$font-name}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+@mixin import-font($font-url){
+  @import url('#{$font-url}');
+}
+@mixin font($font-name, $font-weight: normal, $font-size: null, $line-height: normal, $color: null) {
+  font-family: $font-name !important;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  @if $font-size != null {
+    font-size: $font-size;
+  }
+  @if $color != null {
+    color: $color;
+  }
+}
+@mixin icon($font-name, $content, $font-size: null, $line-height: normal, $color: null) {
+  @include font($font-name, normal, $font-size, $line-height, $color);
+  content: $content;
+  speak: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
